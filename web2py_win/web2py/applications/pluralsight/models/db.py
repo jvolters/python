@@ -130,3 +130,27 @@ auth.settings.reset_password_requires_verification = True
 # after defining tables, uncomment below to enable auditing
 # -------------------------------------------------------------------------
 # auth.enable_record_versioning(db)
+
+db.define_table('blog',
+                Field('blog_title', requires=IS_NOT_EMPTY() ),
+                Field('blog_details', type='text'),
+                Field('blog_image', requires=IS_URL() ),
+                Field('blog_url', requires=IS_URL() ),
+                Field('blog_category', requires=IS_IN_SET(['News','Events']) ),
+                Field('blog_date_posted', type='date', requires=IS_DATE() )
+               )
+## https://www.briandunning.com/sample-data/
+db.define_table('contacts',
+                Field('first_name'),
+                Field('last_name'),
+                Field('company_name'),
+                Field('address'),
+                Field('city'),
+                Field('county'),
+                Field('state_name'),
+                Field('zip'),
+                Field('phone1'),
+                Field('phone2'),
+                Field('email', requires=IS_EMAIL()),
+                Field('web')
+                )

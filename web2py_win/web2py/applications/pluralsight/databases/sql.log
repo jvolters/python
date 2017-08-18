@@ -53,3 +53,41 @@ CREATE TABLE "auth_cas"(
     "renew" CHAR(1)
 );
 success!
+timestamp: 2017-07-17T15:20:34.190000
+CREATE TABLE "blog"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT
+);
+success!
+timestamp: 2017-07-17T15:24:33.898000
+ALTER TABLE "blog" ADD "blog_title" CHAR(512);
+timestamp: 2017-07-17T15:24:33.938000
+ALTER TABLE "blog" ADD "blog_details" TEXT;
+success!
+timestamp: 2017-07-17T15:26:34.031000
+ALTER TABLE "blog" ADD "blog_image" CHAR(512);
+success!
+timestamp: 2017-07-17T15:27:34.314000
+ALTER TABLE "blog" ADD "blog_url" CHAR(512);
+timestamp: 2017-07-17T15:27:34.335000
+ALTER TABLE "blog" ADD "blog_category" CHAR(512);
+success!
+timestamp: 2017-07-17T15:28:34.186000
+ALTER TABLE "blog" ADD "blog_date_posted" DATE;
+success!
+timestamp: 2017-07-18T12:05:31.014000
+CREATE TABLE "contacts"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(512),
+    "last_name" CHAR(512),
+    "company_name" CHAR(512),
+    "address" CHAR(512),
+    "city" CHAR(512),
+    "county" CHAR(512),
+    "state_name" CHAR(512),
+    "zip" CHAR(512),
+    "phone1" CHAR(512),
+    "phone2" CHAR(512),
+    "email" CHAR(512),
+    "web" CHAR(512)
+);
+success!
